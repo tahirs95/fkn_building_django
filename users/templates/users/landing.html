@@ -1,0 +1,29 @@
+{% extends "users/base.html" %}
+{% load static %}
+{% block content %}
+
+	<span class="login100-form-title p-b-70">
+		Profile
+	</span>
+	<span class="login100-form-avatar">
+		<img src="{{ user.profile.image.url }}" alt="user's profile picture">
+	</span>
+	<span class="popular-entry-title">
+		<p class="popular-entry-title-link">{{ user.username }}</p>
+		<span class="popular-entry-date">{{ user.email }}</span>
+	</span>
+
+<div class="row">
+        <div class="container-login100-form-btn mb1">
+            <button class="login100-form-btn">
+                Logout
+            </button>
+        </div>
+        <div class="container-login100-form-btn">
+            <a href="{% url 'Review' %}" class="login100-form-btn">
+                Write a review
+            </a>
+        </div>
+    </div>
+
+{% endblock content %}

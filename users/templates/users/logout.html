@@ -1,0 +1,27 @@
+{% extends "users/base.html" %}
+{% load static %}
+{% block content %}
+
+		<span class="login100-form-title p-b-70">
+			Logout
+		</span>
+
+			<div class="container-login100-form-btn">
+				<button class="login100-form-btn" >
+					Logout
+				</button>
+			</div>
+
+			<ul class="login-more p-t-190">
+
+				<li>
+					<span class="txt1">
+						Change your mind?
+					</span>
+
+					<a href="{% url 'login' %}" class="txt2">
+						Login
+					</a>
+				</li>
+			</ul>
+{% endblock content %}

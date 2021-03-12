@@ -1,0 +1,18 @@
+{% extends "users/base.html" %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block content %}
+	<form class="login100-form validate-form" method="post">
+		{% csrf_token %}
+		<span class="login100-form-title p-b-70">
+			Customer Review
+		</span>
+			{{ form|crispy }}
+			<div class="container-login100-form-btn">
+				<button class="login100-form-btn" type="submit">
+					Submit
+				</button>
+			</div>
+
+	</form>
+{% endblock content %}

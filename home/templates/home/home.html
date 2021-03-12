@@ -1,0 +1,42 @@
+{% extends "home/base.html" %}
+{% load static %}
+{% block content %}
+
+        <!-- begin:testimonial -->
+    <div id="testimonial" class="block-section image-block bg-white">
+      <div class="container-fluid container-no-padding">
+        <div class="row row-no-margin">
+          <div class="image-block-item col-md-6 col-md-offset-6 col-sm-5 col-xs-12">
+            <div class="image-block-item-background" style="background-image: url('{% static 'home/assets/img/img-content-03.jpg' %}');"></div>
+          </div><!-- .image-block-item -->
+        </div><!-- .row -->
+      </div><!-- .container-fluid -->
+      <div class="container clear">
+        <div class="row">
+          <div class="col-md-5 col-md-offset-0 col-sm-7 col-sm-offset-5 padd-60-top padd-100-btm">
+            <h2 class="marg-40-btm text-center">What People Say About Us</h2>
+            <div class="carousel slide testimony-dark" id="testimony" data-ride="carousel">
+              {% if posts %}
+                <ol class="carousel-indicators">
+                  {% for item in posts %}
+                      <li data-target="#testimony" data-slide-to={{ forloop.counter0 }} class="{% if forloop.first %} active{% endif %}"></li>
+                  {% endfor %}
+                </ol><!-- .carousel-indicators -->
+                <div class="carousel-inner" role="listbox">
+                  {% for post in posts %}
+                    <div class="item {% if forloop.first %} active{% endif %}"">
+                      <p>{{ post.content }}</p>
+                      <img class="testimony-item-image" src="{% static 'home/assets/img/img-testimony-01.jpg' %}">
+                      <span class="testimony-item-source source-alt"><strong>{{ post.author }}</strong> {{ post.date_posted|date:"d F, y" }}</span>
+                    </div><!-- .item -->
+                  {% endfor %}
+                </div><!-- .carousel-inner -->
+            {% endif %}
+            </div><!-- #client-says -->
+          </div><!-- .col-## -->
+        </div><!-- .row -->
+      </div><!-- .container -->
+    </div><!-- #testimonial -->
+    <!-- end:testimonial -->
+
+{% endblock content %}

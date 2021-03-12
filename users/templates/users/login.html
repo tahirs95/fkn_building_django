@@ -1,0 +1,33 @@
+{% extends "users/base.html" %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block content %}
+	<form class="login100-form validate-form" method="post">
+		{% csrf_token %}
+		<span class="login100-form-title p-b-70">
+			Login
+		</span>
+		<span class="login100-form-avatar">
+			<img src="{% static 'users/images/avatar-01.jpg' %}" alt="AVATAR">
+		</span>
+			{{ form|crispy }}
+			<div class="container-login100-form-btn">
+				<button class="login100-form-btn" type="submit">
+					Login
+				</button>
+			</div>
+
+			<ul class="login-more p-t-190">
+
+				<li>
+					<span class="txt1">
+						Don't have an account yet?
+					</span>
+
+					<a href="{% url 'register' %}" class="txt2">
+						Register
+					</a>
+				</li>
+			</ul>
+	</form>
+{% endblock content %}

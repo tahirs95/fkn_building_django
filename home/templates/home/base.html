@@ -1,0 +1,469 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="construction is awesome bootstrap responsive construction business theme">
+    <meta name="keywords" content="construction, business, construction business, responsive, parallax, business theme">
+    <meta name="author" content="templateninja">
+    <title>Construction</title>
+
+    <!-- Bootstrap -->
+    <link href="{% static 'home/assets/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:300,500" rel="stylesheet">
+    <link href="{% static 'home/assets/css/font-awesome.min.css' %}" rel="stylesheet">
+    <link href="{% static 'home/assets/css/Pe-icon-7-stroke.css' %}" rel="stylesheet">
+    <link href="{% static 'home/assets/css/owl.carousel.css' %}" rel="stylesheet">
+    <link href="{% static 'home/assets/css/owl.theme.css' %}" rel="stylesheet">
+    <link href="{% static 'home/assets/css/magnific-popup.css' %}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'home/assets/css/style.min.css' %}">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="{% static 'home/assets/plugins/html5shiv.min.js' %}"></script>
+      <script src="{% static 'home/assets/plugins/respond.min.js' %}"></script>
+    <![endif]-->
+  </head>
+  <body id="home">
+
+    <!-- begin:header -->
+    <div class="header" data-parallax="scroll" data-image-src="{% static 'home/assets/img/img-header-ty.jpg' %}">
+      <!-- begin:topbar -->
+      <div id="topbar" class="topbar">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-8">
+              <div class="nav-utility">
+                <span class="nav-item">FKN Building Services</span>
+              </div><!-- .nav-utility -->
+            </div><!-- .col-sm-8 -->
+            <div class="col-sm-4 hidden-xs">
+              <div class="nav-utility nav-right">
+                <a href="#" class="nav-item"><i class="fa fa-twitter"></i></a>
+                <a href="#" class="nav-item"><i class="fa fa-facebook"></i></a>
+                <a href="#" class="nav-item"><i class="fa fa-linkedin"></i></a>
+                <a href="#contact" class="nav-item"><i class="fa fa-envelope-o"></i></a>
+              </div><!-- .nav-utility -->
+            </div><!-- .col-sm-4 -->
+          </div><!-- .row -->
+        </div><!-- .container -->
+      </div><!-- .topbar -->
+      <!-- end:topbar -->
+
+      <!-- begin:site-navigation -->
+      <div class="site-header-affix-wrapper">
+        <header id="masthead" class="site-header" role="banner">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-3">
+                <div class="site-branding">
+                  <h1 class="site-title title-image"><a href="#home" rel="home"><img src="{% static 'home/assets/img/img-logo.png' %}" alt="construction business" class="img-responsive"></a></h1>
+                </div><!-- .site-branding -->
+              </div><!-- .col-sm-3 -->
+
+              <div class="col-sm-9">
+                <nav id="site-navigation" class="main-navigation" role="navigation">
+                  <button type="button" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><span class="pe-7s-menu"></span><span class="sr-only">Primary Menu</span></button>
+
+                  <div class="menu-testing-menu-container">
+                    <ul id="primary-menu" class="menu nav-menu" aria-expanded="false">
+                      <li class="menu-item current-menu-item"><a href="#home">Home</a></li>
+                      <li class="menu-item menu-item-has-children" aria-haspopup="true"><a href="#">About</a>
+                          <ul class="sub-menu">
+                            <li class="menu-item"><a href="#about">About us</a></li>
+                            <li class="menu-item"><a href="#service">Service</a></li>
+                            <li class="menu-item"><a href="#work">Projects</a></li>
+                          </ul>
+                        </li>
+                      <li class="menu-item"><a href="#testimonial">Testimonial</a></li>
+                      <li class="menu-item"><a href="#contact">Contact</a></li>
+                      {% if user.is_authenticated %}
+                        <li class="menu-item menu-item-has-children" aria-haspopup="true"><a href="#">{{ user.username }}</a>
+                          <ul class="sub-menu">
+                            <li class="menu-item current-menu-item"><a href="{% url 'user-landing' %}">Profile</a></li>
+                            <li class="menu-item"><a href="service-item.html">Write a feedback</a></li>
+                            <li class="menu-item"><a href="{% url 'logout' %}">Logout</a></li>
+                          </ul>
+                        </li>
+                      {% else %}
+                        <li class="menu-item"><a href="{% url 'login' %}">Login</a></li>
+                      {% endif %}
+                    </ul>
+                  </div>
+                </nav><!-- #site-navigation -->
+              </div><!-- .col-sm-9 -->
+            </div><!-- .row -->
+          </div><!-- .container -->
+        </header><!-- #masthead -->
+      </div><!-- .site-header-affix-wrapper -->
+      <!-- end:site-navigation -->
+
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-5">
+            <div class="header-caption">
+              <span class="caption-subtitle">Our Service</span>
+              <h2 class="caption-title">We offer the best home renovations and construction solution.</h2>
+              <p>We don’t have 40 years' experience, but you can trust us to bring your dream home into reality, from ground-up new housing developments, bathroom, kitchen to existing space transformations. </p>
+              <div class="header-action-button">
+                <a class="btn btn-default btn-bordered  btn-lg" href="#contact">Talk to us</a>
+              </div><!-- header-action-button -->
+            </div><!-- .header-caption -->
+          </div><!-- .col-sm-5 -->
+        </div><!-- .row -->
+      </div><!-- .container -->
+    </div><!-- #header -->
+    <!-- end:header -->
+
+    <!-- begin:additional-info -->
+    <div id="additional-info" class="additional-info block-section bg-grey padd-20-top padd-40-btm">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 col-sm-6 col-xs-6">
+            <div class="contact-item">
+              <div class="contact-item-icon">
+                <i class="fa fa-phone"></i>
+              </div><!-- .contact-item-icon -->
+              <h4 class="contact-item-title">Phone number:</h4>
+              <div class="contact-item-info">+44 7463 615 924</div>
+            </div><!-- .contact-item -->
+          </div><!-- .col-# -->
+
+          <div class="col-md-3 col-sm-6 col-xs-6">
+            <div class="contact-item">
+              <div class="contact-item-icon">
+                <i class="fa fa-envelope-o"></i>
+              </div><!-- .contact-item-icon -->
+              <h4 class="contact-item-title">Email address:</h4>
+              <div class="contact-item-info">fknortey@gmail.com</div>
+            </div><!-- .contact-item -->
+          </div><!-- .col-# -->
+
+          <div class="col-md-3 col-sm-6 col-xs-6">
+            <div class="contact-item">
+              <div class="contact-item-icon">
+                <i class="fa fa-map-marker"></i>
+              </div><!-- .contact-item-icon -->
+              <h4 class="contact-item-title">Office address:</h4>
+              <div class="contact-item-info">13 Brackey Close SM6 9JR</div>
+            </div><!-- .contact-item -->
+          </div><!-- .col-# -->
+
+          <div class="col-md-3 col-sm-6 col-xs-6">
+            <div class="contact-item">
+              <div class="contact-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </div><!-- .contact-item-icon -->
+              <h4 class="contact-item-title">Opening times:</h4>
+              <div class="contact-item-info">Mon - Sat: 8.30 - 17:00</div>
+            </div><!-- .contact-item -->
+          </div><!-- .col-# -->
+        </div><!-- .row -->
+      </div><!-- container -->
+    </div><!-- #additional-info -->
+    <!-- end:additional-info -->
+
+    <!-- begin:service -->
+    <div id="service" class="service content-section bg-white">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 col-sm-6 col-xs-6">
+            <div class="blog-entry">
+              <div class="blog-entry-thumbnail">
+                    <img src="{% static 'home/assets/img/img-service_2.jpg' %}" alt="metal roofting" class="img-responsive">
+              </div>
+              <div class="blog-entry-header">
+                <h2 class="entry-title"><span rel="bookmark">Bathrooms</span></h2>
+              </div><!-- .blog-entry-header -->
+              <div class="blog-entry-content">
+                <p>Whether repairs, new suite or a full bathroom restoration, we will be able to make it happen. </p>
+
+              </div><!-- .blog-entry-content -->
+            </div><!-- .blog-entry -->
+          </div><!-- .col-md-4 -->
+
+          <div class="col-md-3 col-sm-6 col-xs-6">
+            <div class="blog-entry">
+              <div class="blog-entry-thumbnail">
+                    <img src="{% static 'home/assets/img/img-service_3.jpg' %}" alt="metal roofting" class="img-responsive">
+              </div>
+              <div class="blog-entry-header">
+                <h2 class="entry-title"><span rel="bookmark">Kitchens</span></h2>
+              </div><!-- .blog-entry-header -->
+              <div class="blog-entry-content">
+                <p>Redoing the epicentre of your home can be daunting process. There are many things to think about, and using a trusted, experienced building company like us will help make the process much simpler. </p>
+
+              </div><!-- .blog-entry-content -->
+            </div><!-- .blog-entry -->
+          </div><!-- .col-md-4 -->
+
+          <div class="col-md-3 col-sm-6 col-xs-6">
+            <div class="blog-entry">
+              <div class="blog-entry-thumbnail">
+                    <img src="{% static 'home/assets/img/img-service_4.jpg' %}" alt="metal roofing" class="img-responsive">
+              </div>
+              <div class="blog-entry-header">
+                <h2 class="entry-title"><span rel="bookmark">Extensions</span></h2>
+              </div><!-- .blog-entry-header -->
+              <div class="blog-entry-content">
+                <p>We are specialised in high-end home improvement projects; we build outstanding project that complements homes and meet our customer need. </p>
+              </div><!-- .blog-entry-content -->
+            </div><!-- .blog-entry -->
+          </div><!-- .col-md-4 -->
+
+          <div class="col-md-3 col-sm-6 col-xs-6">
+            <div class="blog-entry">
+              <div class="blog-entry-thumbnail">
+                <img src="{% static 'home/assets/img/img-service_1.jpg' %}" alt="green building" class="img-responsive">
+              </div>
+              <div class="blog-entry-header">
+                <h2 class="entry-title"><span rel="bookmark">Refurbishment</span></h2>
+              </div><!-- .blog-entry-header -->
+              <div class="blog-entry-content">
+                <p>We have extensive experience in undertaking such projects, and we provide our customers with service of the highest quality.</p>
+              </div><!-- .blog-entry-content -->
+            </div><!-- .blog-entry -->
+          </div><!-- .col-md-4 -->
+
+        </div><!-- .row -->
+      </div><!-- container -->
+    </div><!-- #service -->
+    <!-- end:service -->
+
+    <!-- begin:work -->
+    <div id="work" class="work content-section bg-grey">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-title">
+              <h2>Our Works</h2>
+            </div>
+          </div><!-- .col-md-12 -->
+        </div><!-- .row -->
+
+        <div class="row">
+          <div class="col-md-12">
+            {% if ourwork %}
+              <ul class="work-filter">
+                <li class="active" data-filter="*"><a href="#">All works</a></li>
+                {% for item in ourwork %}
+                    <li data-filter=".{{ item.title }}"><a href="#{{ item.title }}">{{ item.title }}</a></li>
+                {% endfor %}
+              </ul><!-- .work-filter -->
+
+              <ul class="work-grid">
+                {% for item in workdone %}
+                    <li class="work-item {{ item.our_works.title }}">
+                      <a href="{{ item.image.url }}" title="{{ item.description }}" class="image-lightbox">
+                        <div class="work-item-image">
+                          <img src="{{ item.image.url }}" alt="{{ item.description }}">
+                        </div><!-- .work-item-image -->
+                        <div class="work-item-info">
+                          <h4 class="work-item-title">{{ item.description }}</h4>
+                          <span class="work-item-desc">{{ item.our_works.title }}</span>
+                        </div><!-- .work-item-info -->
+                      </a>
+                    </li><!-- .work-item -->
+                {% endfor %}
+              </ul><!-- .work-grid -->
+            {% endif %}
+          </div><!-- .col-md-12 -->
+        </div><!-- .row -->
+      </div><!-- .container -->
+    </div><!-- #work -->
+    <!-- end:work -->
+
+    <!-- begin:about -->
+    <div id="about" class="block-section image-block">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="image-block-item col-md-6 col-sm-5 col-xs-12 padd-10">
+            <div class="image-block-item-background" style="background-image: url('{% static 'home/assets/img/extension.jpg' %}');"></div>
+          </div><!-- .image-block-item -->
+        </div><!-- .row -->
+      </div><!-- .container-fluid -->
+      <div class="container clear">
+        <div class="row">
+          <div class="col-md-5 col-md-offset-7 col-sm-6 col-sm-offset-6 col-xs-10 col-xs-offset-1 padd-80-top padd-60-btm">
+            <ul class="nav nav-tabs nav-justified" id="myTabs" role="tablist">
+              <li role="presentation" class="active">
+                <a href="#who" id="who-tab" role="tab" data-toggle="tab" aria-controls="who" aria-expanded="true">Who We Are</a>
+              </li>
+              <li role="presentation" class="">
+                <a href="#why" role="tab" id="why-tab" data-toggle="tab" aria-controls="why" aria-expanded="false">Why Choose Us</a>
+              </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+              <div class="tab-pane fade active in" role="tabpanel" id="who" aria-labelledby="who-tab">
+                <h2 class="marg-20-btm">Who We Are?</h2>
+                <p>Construction, Inc. traces its roots back to 1989 in Orange and since then have never looked back. With thousands of successful projects under our belt, we can proudly say that we are one.</p>
+                <p>For more than 25 years, Construction has offered a wide range of construction services in Colorado, many other cities of United States and around the world. We strive to maintain.<br>We aim to eliminate the task of dividing your project between different architecture and construction company.</p>
+                <p><a href="#" class="button"><i class="fa fa-wrench"></i> Learn Our Service</a></p>
+              </div>
+              <div class="tab-pane fade" role="tabpanel" id="why" aria-labelledby="why-tab">
+                <h2 class="marg-40-btm">Why Choose Us?</h2>
+                <div class="service-item service-item-icon-left">
+                  <div class="service-item-icon">
+                    <span class="pe-7s-gleam"></span>
+                  </div><!-- .service-item-icon -->
+                  <h4 class="service-item-title">We Are Passionate</h4>
+                  <p>We have a proven record of accomplishment and are a reputable company in the California.</p>
+                </div>
+                <div class="service-item service-item-icon-left">
+                  <div class="service-item-icon">
+                    <span class="pe-7s-like"></span>
+                  </div><!-- .service-item-icon -->
+                  <h4 class="service-item-title">Honest and Dependable</h4>
+                  <p>For us, honesty is the only policy and we strive to complete all projects with integrity.</p>
+                </div>
+                <p><a class="button btn-danger popup-video" href="http://www.youtube.com/watch?v=Og879fOk6DQ"><i class="fa fa-play-circle-o"></i> Watch Overview</a></p>
+              </div><!-- .tab-pane -->
+            </div><!-- .tab-content -->
+          </div><!-- .col-## -->
+        </div><!-- .row -->
+      </div><!-- .container -->
+    </div><!-- #about -->
+    <!-- end:about -->
+
+    {% block content %}{% endblock %}
+
+    <!-- begin:contact -->
+    <div id="contact" class="contact image-block">
+      <div class="container-fluid container-no-padding">
+        <div class="row row-no-margin">
+          <div class="image-block-item col-md-6 col-sm-5 col-xs-12">
+            <div class="image-block-item-background image-block-item-map" data-lat="33.7955454" data-lng="-117.8282586"></div>
+          </div><!-- .image-block-item -->
+        </div><!-- .row -->
+      </div><!-- .container-fluid -->
+      <div class="container clear">
+        <div class="row">
+          <div class="col-md-5 col-md-offset-7 col-sm-6 col-sm-offset-6 col-xs-12 col-xs-offset-0 padd-40-top padd-80-btm">
+            <h2 class="marg-20-btm">General Enquiries</h2>
+              <p>Send us an email by entering your details and any comments you may have in the form. We will get in touch with you as soon as we can.</p>
+
+            {% if msg %}
+              <h2 class="marg-40-btm text-center">Thanks {{ msg.contact_name }}</h2>
+              <p>Your message has been sent and we will get back shortly...</p>
+            {% else %}
+              <form action="contact" class="contact-form" method="POST">
+              {% csrf_token %}
+              <div class="form-group">
+                <label for="contact_name">Name</label>
+                <input name="contact_name" type="text" class="form-control form-bordered" id="contact_name">
+              </div>
+              <div class="form-group">
+                <label for="contact_email" class="form-label">Email</label>
+                <input name="contact_email" type="email" class="form-control form-bordered" id="contact_email">
+              </div>
+              <div class="form-group">
+                <label for="contact_phone" class="form-label">Mobile</label>
+                <input name="contact_phone" type="phone" class="form-control form-bordered" id="contact_phone">
+              </div>
+              <div class="form-group">
+                <label for="contact_message" class="form-label">Message</label>
+                <textarea name="contact_message" class="form-control form-bordered" rows="6" id="contact_message"></textarea>
+              </div>
+              <button type="submit" class="button btn-squared btn-rounded">Send Message</button>
+            </form><!-- .contact-form -->
+            {% endif %}
+          </div><!-- .col-## -->
+        </div><!-- .row -->
+      </div><!-- .container -->
+    </div><!-- #contact -->
+    <!-- end:contact -->
+
+    <!-- begin:client -->
+    <div id="client" class="client block-section bg-white padd-20-top padd-20-btm">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div id="slider-thumbnail" class="owl-carousel owl-theme client-slider slider-carousel navigation-hide">
+              <div class="item">
+                <a href="#">
+                  <img src="{% static 'home/assets/img/img-client-01.png' %}" alt="client">
+                </a>
+              </div><!-- .item -->
+              <div class="item">
+                <a href="#">
+                  <img src="{% static 'home/assets/img/img-client-02.png' %}" alt="client">
+                </a>
+              </div><!-- .item -->
+              <div class="item">
+                <a href="#">
+                  <img src="{% static 'home/assets/img/img-client-03.png' %}" alt="client">
+                </a>
+              </div><!-- .item -->
+              <div class="item">
+                <a href="#">
+                  <img src="{% static 'home/assets/img/img-client-04.png' %}" alt="client">
+                </a>
+              </div><!-- .item -->
+              <div class="item">
+                <a href="#">
+                  <img src="{% static 'home/assets/img/img-client-05.png' %}" alt="client">
+                </a>
+              </div><!-- .item -->
+              <div class="item">
+                <a href="#">
+                  <img src="{% static 'home/assets/img/img-client-06.png' %}" alt="client">
+                </a>
+              </div><!-- .item -->
+              <div class="item">
+                <a href="#">
+                  <img src="{% static 'home/assets/img/img-client-07.png' %}" alt="client">
+                </a>
+              </div><!-- .item -->
+              <div class="item">
+                <a href="#">
+                  <img src="{% static 'home/assets/img/img-client-08.png' %}" alt="client">
+                </a>
+              </div><!-- .item -->
+            </div><!-- #slider-thumbnail -->
+          </div><!-- .col-md-12 -->
+        </div><!-- .row -->
+      </div><!-- .container -->
+    </div><!-- #client -->
+    <!-- end:client -->
+
+    <!-- begin:copyright -->
+    <section id="copyright" class="copyright bg-black">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 copy-left">
+            <p>Copyright &copy; 2021 <a href="#"><strong>Felix</strong></a>. All Right Reserved.</p>
+          </div><!-- .col-sm-6 -->
+
+          <div class="col-sm-6 copy-right">
+            <ul class="social-icon">
+              <li><a href="#" target="_blank" class="icon-twitter"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="#" target="_blank" class="icon-facebook"><i class="fa fa-facebook-square"></i></a></li>
+              <li><a href="#" target="_blank" class="icon-youtube"><i class="fa fa-youtube"></i></a></li>
+              <li><a href="#" target="_blank" class="icon-instagram"><i class="fa fa-instagram"></i></a></li>
+            </ul>
+          </div><!-- .col-sm-6 -->
+        </div><!-- .row -->
+      </div><!-- .container -->
+    </section><!-- #copyright -->
+    <!-- begin:copyright -->
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="{% static 'home/assets/plugins/jquery.min.js' %}"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="{% static 'home/assets/bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'home/assets/plugins/parallax.min.js' %}"></script>
+    <script src="{% static 'home/assets/js/navigation.js' %}"></script>
+    <script src="{% static 'home/assets/plugins/jquery.easing.js' %}"></script>
+    <script src="{% static 'home/assets/plugins/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'home/assets/plugins/imagesloaded.pkgd.min.js' %}"></script>
+    <script src="{% static 'home/assets/plugins/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'home/assets/plugins/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'home/assets/plugins/gmap3.min.js' %}"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBtR223ih2ZwVJX2SGBixD3p87Aa8RV2Is"></script>
+    <script src="{% static 'home/assets/js/script.min.js' %}"></script>
+  </body>
+</html>
