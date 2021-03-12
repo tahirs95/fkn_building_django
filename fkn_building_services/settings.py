@@ -24,7 +24,7 @@ SECRET_KEY = '&o6x^t9#!gj@6-jzb(t_6tmlv-ebw71r%*a7g7$l&88-eh7si2'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["3.95.20.188", "127.0.0.1"]
+ALLOWED_HOSTS = ["3.95.20.188", "127.0.0.1", "fknbuildingservices.com"]
 
 
 # Application definition
